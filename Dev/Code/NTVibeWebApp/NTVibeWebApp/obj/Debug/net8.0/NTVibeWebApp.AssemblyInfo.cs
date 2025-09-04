@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NTVibeWebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f1390c9462fe022e5fe6961a0bbc9065db95db16")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba849e1bcaf3fc5b800c604b0465b4545df51a79")]
 [assembly: System.Reflection.AssemblyProductAttribute("NTVibeWebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NTVibeWebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
