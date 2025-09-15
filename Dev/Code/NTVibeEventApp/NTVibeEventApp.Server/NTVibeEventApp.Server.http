@@ -1,0 +1,6 @@
+@NTVibeEventApp.Server_HostAddress = http://localhost:5138
+
+GET {{NTVibeEventApp.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

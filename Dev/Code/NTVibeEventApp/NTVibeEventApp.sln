@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NTVibeEventApp.Server", "NTVibeEventApp.Server\NTVibeEventApp.Server.csproj", "{933FCE1A-6F9D-40D1-9913-6E199DE0B2AE}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "ntvibeeventapp.client", "ntvibeeventapp.client\ntvibeeventapp.client.esproj", "{92823C39-C47C-494E-B516-E3F2AC59C5BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{933FCE1A-6F9D-40D1-9913-6E199DE0B2AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{933FCE1A-6F9D-40D1-9913-6E199DE0B2AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{933FCE1A-6F9D-40D1-9913-6E199DE0B2AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{933FCE1A-6F9D-40D1-9913-6E199DE0B2AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92823C39-C47C-494E-B516-E3F2AC59C5BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92823C39-C47C-494E-B516-E3F2AC59C5BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92823C39-C47C-494E-B516-E3F2AC59C5BE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{92823C39-C47C-494E-B516-E3F2AC59C5BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92823C39-C47C-494E-B516-E3F2AC59C5BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92823C39-C47C-494E-B516-E3F2AC59C5BE}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {17E8A2AA-4156-4102-9E0A-431FFCB1224B}
+	EndGlobalSection
+EndGlobal
