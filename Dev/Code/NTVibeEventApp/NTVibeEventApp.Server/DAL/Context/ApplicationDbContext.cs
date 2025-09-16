@@ -1,6 +1,15 @@
-﻿namespace NTVibeEventApp.Server.DAL.Context
+﻿using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
+using NTVibeEventApp.Server.Entities;
+
+namespace NTVibeEventApp.Server.DAL.Context
 {
-    public class ApplicationDbContext
+    public class ApplicationDbContext : DbContext
     {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        {
+        }
+
+        public DbSet<User> Users { get; set; }
     }
 }
