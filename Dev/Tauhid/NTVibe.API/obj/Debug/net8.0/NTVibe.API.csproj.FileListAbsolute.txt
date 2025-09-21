@@ -1,7 +1,0 @@
-C:\Projects\PRT681_S2025_Final_Project_Group-A\PRT681_S2025_Final_Project_Group-A\Dev\Tauhid\NTVibe.API\obj\Debug\net8.0\rpswa.dswa.cache.json
-C:\Projects\PRT681_S2025_Final_Project_Group-A\PRT681_S2025_Final_Project_Group-A\Dev\Tauhid\NTVibe.API\obj\Debug\net8.0\NTVibe.API.GeneratedMSBuildEditorConfig.editorconfig
-C:\Projects\PRT681_S2025_Final_Project_Group-A\PRT681_S2025_Final_Project_Group-A\Dev\Tauhid\NTVibe.API\obj\Debug\net8.0\NTVibe.API.AssemblyInfoInputs.cache
-C:\Projects\PRT681_S2025_Final_Project_Group-A\PRT681_S2025_Final_Project_Group-A\Dev\Tauhid\NTVibe.API\obj\Debug\net8.0\NTVibe.API.AssemblyInfo.cs
-C:\Projects\PRT681_S2025_Final_Project_Group-A\PRT681_S2025_Final_Project_Group-A\Dev\Tauhid\NTVibe.API\obj\Debug\net8.0\NTVibe.API.csproj.CoreCompileInputs.cache
-C:\Projects\PRT681_S2025_Final_Project_Group-A\PRT681_S2025_Final_Project_Group-A\Dev\Tauhid\NTVibe.API\obj\Debug\net8.0\NTVibe.API.MvcApplicationPartsAssemblyInfo.cache
-C:\Projects\PRT681_S2025_Final_Project_Group-A\PRT681_S2025_Final_Project_Group-A\Dev\Tauhid\NTVibe.API\obj\Debug\net8.0\NTVibe.API.sourcelink.json
