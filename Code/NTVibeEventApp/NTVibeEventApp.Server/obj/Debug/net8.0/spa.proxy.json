@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:5173",
+"RedirectUrl": "",
+"LaunchCommand": "npm run dev",
+"WorkingDirectory": "C:\\Projects\\PRT681_Group-A\\PRT681_S2025_Final_Project_Group-A\\Dev\\Code\\NTVibeEventApp\\NTVibeEventApp.Server\\..\\ntvibeeventapp.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}

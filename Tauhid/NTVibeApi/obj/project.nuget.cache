@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "H+9Vzu/jE/s=",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\PRT681_S2025_Final_Project_Group-A\\Dev\\Tauhid\\NTVibeApi\\NTVibeApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\atoul\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.7\\microsoft.aspnetcore.openapi.9.0.7.nupkg.sha512",
+    "C:\\Users\\atoul\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
