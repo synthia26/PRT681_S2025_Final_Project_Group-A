@@ -1,0 +1,16 @@
+@use "./_gradient.scss" as *;
+
+@mixin fill( $color: null, $bg: null, $border: null, $gradient: null ) {
+    @if $border {
+        border-color: $border;
+    }
+    @if $color {
+        color: $color;
+    }
+    @if $bg {
+        background-color: $bg;
+    }
+    @if $gradient {
+        @include linear-gradient( $gradient );
+    }
+}

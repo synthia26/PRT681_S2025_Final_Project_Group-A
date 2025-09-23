@@ -1,4 +1,12 @@
 ﻿import { useState } from "react";
+import {
+    Card,
+    CardHeader,
+    CardBody,
+    CardTitle,
+    CardActions
+} from "@progress/kendo-react-layout";
+import events from "../data/events";
 
 export default function Home() {
     const [search, setSearch] = useState("");
@@ -77,32 +85,38 @@ export default function Home() {
                     </button>
                 </form>
 
-                {/* Carousel (Static Demo) */}
-                <div
-                    style={{
-                        display: "flex",
-                        overflowX: "auto",
-                        gap: "20px",
-                        padding: "10px",
-                        marginBottom: "30px",
-                    }}
-                >
-                    {["Music Festival", "Food Market", "Art Expo"].map((event, i) => (
-                        <div
-                            key={i}
-                            style={{
-                                minWidth: "250px",
-                                height: "150px",
-                                backgroundColor: "rgba(255,255,255,0.2)",
-                                borderRadius: "10px",
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                fontSize: "1.2rem",
-                            }}
-                        >
-                            {event}
-                        </div>
+                {/* Event Cards */}
+                <div style={{ display: "flex", gap: "20px", justifyContent: "center", flexWrap: "wrap" }}>
+                    {events.map((event) => (
+                        <Card key={event.id} style={{ width: 300 }}>
+                            <CardHeader>
+                                <img
+                                    src={event.image}
+                                    alt={event.title}
+                                    style={{ width: "100%", borderRadius: "6px 6px 0 0" }}
+                                />
+                            </CardHeader>
+                            <CardBody>
+                                <CardTitle>{event.title}</CardTitle>
+                                <p style={{ fontSize: "0.9rem", margin: "10px 0" }}>{event.description}</p>
+                                <p><strong>Date:</strong> {new Date(event.date).toDateString()}</p>
+                                <p><strong>Location:</strong> {event.location}</p>
+                            </CardBody>
+                            <CardActions>
+                                <button
+                                    style={{
+                                        background: "#007bff",
+                                        color: "white",
+                                        padding: "8px 14px",
+                                        border: "none",
+                                        borderRadius: "4px",
+                                        cursor: "pointer",
+                                    }}
+                                >
+                                    View Details
+                                </button>
+                            </CardActions>
+                        </Card>
                     ))}
                 </div>
 
@@ -117,6 +131,7 @@ export default function Home() {
                         border: "none",
                         borderRadius: "8px",
                         cursor: "pointer",
+                        marginTop: "30px"
                     }}
                 >
                     Explore More

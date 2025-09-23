@@ -1,5 +1,15 @@
 {
   "dependencies": {
+    "@progress/kendo-data-query": "^1.7.1",
+    "@progress/kendo-licensing": "^1.7.1",
+    "@progress/kendo-react-data-tools": "^12.0.2",
+    "@progress/kendo-react-dropdowns": "^12.0.2",
+    "@progress/kendo-react-grid": "^12.0.2",
+    "@progress/kendo-react-inputs": "^12.0.2",
+    "@progress/kendo-react-intl": "^12.0.2",
+    "@progress/kendo-react-layout": "^12.0.2",
+    "@progress/kendo-react-listview": "^12.0.2",
+    "@progress/kendo-theme-default": "^12.0.1",
     "axios": "^1.12.2",
     "react-router-dom": "^7.9.1"
   }
