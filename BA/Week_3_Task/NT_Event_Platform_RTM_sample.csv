@@ -1,0 +1,26 @@
+Req ID,Requirement,Source/Stakeholder,Design Ref,Dev Task/Issue,Test Case ID,Acceptance Criteria (summary),Priority,Risk,Status,Owner
+REQ-001,Users can browse events list with pagination and sort,Public visitors,D/Explore,JIRA-101,TC-001,List shows 12 per page; sort by Date/Popular/Price,H,M,Planned,BA
+REQ-002,"Filter events by Category, Date range, Price, Location radius, Accessibility",Public visitors,D/Explore,JIRA-102,TC-002,Applying filters updates results; clear all resets,H,M,Planned,Dev
+REQ-003,Search events by keyword and location,Public visitors,"D/Home, D/Explore",JIRA-103,TC-003,Search returns matching title/desc within 500km (configurable),H,M,Planned,Dev
+REQ-004,"View Event Details with About, Schedule, Venue map, Accessibility, FAQ, Refund policy",All users,D/Event Details,JIRA-104,TC-004,Tabs load content; map stub visible with address link,H,L,Planned,BA
+REQ-005,Register/Buy tickets with tiers and quantities,Attendee,D/Checkout-1..4,JIRA-105,TC-005,Select tier qty; subtotal updates; continue to details,H,H,In Progress,Dev
+REQ-006,Capture attendee details incl. accessibility needs,Attendee,D/Checkout-2,JIRA-106,TC-006,Required fields validated; optional needs textarea,H,M,In Progress,Dev
+REQ-007,Secure payment (card) or free checkout; show trust badges,Attendee,D/Checkout-3,JIRA-107,TC-007,Valid card processed; free events skip payment,H,H,Planned,Dev
+REQ-008,Order Review & Confirmation with Terms consent,Attendee,D/Checkout-4,JIRA-108,TC-008,Must accept terms; review shows items & totals,H,M,Planned,QA
+REQ-009,Success screen with QR ticket; email confirmation with .ics,Attendee,D/Success,JIRA-109,TC-009,QR renders; email sent within 1 min; Add to calendar works,H,M,Planned,QA
+REQ-010,"My Tickets page: view, QR, transfer, refund request",Authenticated attendee,D/My Tickets,JIRA-110,TC-010,Upcoming/past tabs; transfer requires recipient email valid,M,M,Planned,Dev
+REQ-011,"Organiser dashboard: KPIs, events table, orders table",Organiser,D/Org Dashboard,JIRA-111,TC-011,KPIs show views/registrations/revenue; tables sortable,H,M,Planned,BA
+REQ-012,Create Event wizard (Basics → Tickets → Media → Publish),Organiser,D/Create-1..4,JIRA-112,TC-012,Required fields; cannot publish with missing title/date/venue,H,M,Planned,Dev
+REQ-013,Admin review queue with approval/reject & comments,Admin,Sample/Table,JIRA-113,TC-013,Approve sets status=Live; reject stores reason,M,H,Planned,PM
+REQ-014,"Accessibility metadata per event (wheelchair, AUSLAN, quiet room)",Organiser/Attendee,D/Event Details,JIRA-114,TC-014,Badges visible; filters link to metadata,H,M,Planned,BA
+REQ-015,"WCAG 2.1 AA: color contrast, focus rings, keyboard nav",All users,Accessibility block,JIRA-115,TC-015,All buttons/links reachable by keyboard; contrast ≥4.5:1,H,H,In Progress,QA
+REQ-016,Responsive layouts for 1440/1024/768/390 breakpoints,All users,All D/ and M/ frames,JIRA-116,TC-016,No overflow; nav collapses on mobile; sticky CTAs on mobile,H,M,Planned,Dev
+REQ-017,Performance: Largest Contentful Paint ≤ 2.5s on 4G,All users,Perf spec,JIRA-117,TC-017,LCP measured on Home & Event Details within target,H,M,Planned,Dev
+REQ-018,Security: OWASP top 10 mitigations; HTTPS; PCI scope limited,All users,Security spec,JIRA-118,TC-018,No mixed content; input sanitized; payment via PCI provider,H,H,Planned,Sec
+REQ-019,Audit logging for admin/moderation actions,Admin,Admin module,JIRA-119,TC-019,Approve/reject actions recorded with user/time/IP,M,M,Planned,Dev
+REQ-020,Refund policy displayed and refund workflow,Attendee/Organiser,"D/Event Details, D/My Tickets",JIRA-120,TC-020,Refund request captured; status visible to user,M,M,Planned,BA
+REQ-021,"Email notifications: order, transfer, publish, admin decisions",All roles,Comms spec,JIRA-121,TC-021,Templates localized; sent within SLA; unsubscribe links as lawful,M,M,Planned,Dev
+REQ-022,"Analytics: registrations over time, top events by sales",Organiser,D/Org Dashboard,JIRA-122,TC-022,Charts display correct totals vs database,M,M,Planned,DA
+REQ-023,Data retention & privacy compliance (AU Privacy Act),All users,Legal spec,JIRA-123,TC-023,Privacy policy linked; PII deletion request honored,M,H,Planned,PM
+REQ-024,Map toggle on Explore (list/map),Visitors,D/Explore,JIRA-124,TC-024,Toggle switches view; selected pin highlights card,L,L,Planned,Dev
+REQ-025,Dark mode toggle; reduced motion setting,All users,Accessibility block,JIRA-125,TC-025,Colors swap to dark tokens; motion reduced when enabled,L,M,Planned,Dev
