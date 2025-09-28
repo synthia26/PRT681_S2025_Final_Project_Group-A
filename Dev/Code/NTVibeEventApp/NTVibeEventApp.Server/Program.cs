@@ -4,9 +4,19 @@ using NTVibeEventApp.Server.BLL.Services;
 using NTVibeEventApp.Server.DAL.Context;
 using NTVibeEventApp.Server.DAL.Interfaces;
 using NTVibeEventApp.Server.DAL.Repositories;
+using Serilog;
 
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Configure Serilog
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Debug()  // set default level
+    .WriteTo.Console()     // log to console
+    .WriteTo.File("Logs/log-.txt", rollingInterval: RollingInterval.Day) // daily rolling log file
+    .CreateLogger();
+
+builder.Host.UseSerilog(); // replace default logger with Serilog
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -36,6 +46,12 @@ builder.Services.AddCors(options =>
 
 
 var app = builder.Build();
+
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
+    app.UseHsts();
+}
 
 app.UseCors(MyAllowSpecificOrigins);
 

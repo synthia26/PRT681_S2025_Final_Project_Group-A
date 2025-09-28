@@ -1,0 +1,232 @@
+2025-09-28 09:39:39.634 +09:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-09-28 09:39:39.983 +09:30 [WRN] The WebRootPath was not found: D:\Professional\Aus\CDU\Class\Semester 4 2025\PRT681-Software_Practice\PRT681_S2025_Final_Project_Group-A\Dev\Code\NTVibeEventApp\NTVibeEventApp.Server\wwwroot. Static files may be unavailable.
+2025-09-28 09:39:39.997 +09:30 [DBG] Hosting starting
+2025-09-28 09:39:40.284 +09:30 [WRN] The WebRootPath was not found: D:\Professional\Aus\CDU\Class\Semester 4 2025\PRT681-Software_Practice\PRT681_S2025_Final_Project_Group-A\Dev\Code\NTVibeEventApp\NTVibeEventApp.Server\wwwroot. Static files may be unavailable.
+2025-09-28 09:39:40.424 +09:30 [INF] Now listening on: https://localhost:7125
+2025-09-28 09:39:40.428 +09:30 [INF] Now listening on: http://localhost:5138
+2025-09-28 09:39:40.429 +09:30 [DBG] Loaded hosting startup assembly NTVibeEventApp.Server
+2025-09-28 09:39:40.430 +09:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.SpaProxy
+2025-09-28 09:39:40.431 +09:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-09-28 09:39:40.433 +09:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-09-28 09:39:40.435 +09:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-28 09:39:40.436 +09:30 [INF] Hosting environment: Development
+2025-09-28 09:39:40.437 +09:30 [INF] Content root path: D:\Professional\Aus\CDU\Class\Semester 4 2025\PRT681-Software_Practice\PRT681_S2025_Final_Project_Group-A\Dev\Code\NTVibeEventApp\NTVibeEventApp.Server
+2025-09-28 09:39:40.438 +09:30 [DBG] Hosting started
+2025-09-28 09:39:40.561 +09:30 [DBG] Connection id "0HNFU4D8S8H42" accepted.
+2025-09-28 09:39:40.561 +09:30 [DBG] Connection id "0HNFU4D8S8H41" accepted.
+2025-09-28 09:39:40.563 +09:30 [DBG] Connection id "0HNFU4D8S8H42" started.
+2025-09-28 09:39:40.563 +09:30 [DBG] Connection id "0HNFU4D8S8H41" started.
+2025-09-28 09:39:42.638 +09:30 [DBG] Connection id "0HNFU4D8S8H43" accepted.
+2025-09-28 09:39:42.640 +09:30 [DBG] Connection id "0HNFU4D8S8H43" started.
+2025-09-28 09:39:42.697 +09:30 [DBG] Connection 0HNFU4D8S8H43 established using the following protocol: "Tls13"
+2025-09-28 09:39:42.802 +09:30 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger - null null
+2025-09-28 09:39:42.928 +09:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-09-28 09:39:42.965 +09:30 [DBG] 1 candidate(s) found for the request path '/swagger'
+2025-09-28 09:39:42.974 +09:30 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/swagger'
+2025-09-28 09:39:42.977 +09:30 [DBG] Request matched endpoint 'Fallback {*path:nonfile}'
+2025-09-28 09:39:42.979 +09:30 [DBG] Matched endpoint 'Fallback {*path:nonfile}' is a fallback endpoint.
+2025-09-28 09:39:42.987 +09:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-09-28 09:39:43.017 +09:30 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger - 301 0 null 225.8981ms
+2025-09-28 09:39:43.025 +09:30 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/index.html - null null
+2025-09-28 09:39:43.033 +09:30 [DBG] 1 candidate(s) found for the request path '/swagger/index.html'
+2025-09-28 09:39:43.039 +09:30 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/index.html' for the request path '/swagger/index.html'
+2025-09-28 09:39:43.042 +09:30 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/index.html'
+2025-09-28 09:39:43.044 +09:30 [DBG] Request did not match any endpoints
+2025-09-28 09:39:43.049 +09:30 [DBG] The request path /swagger/index.html does not match an existing file
+2025-09-28 09:39:44.127 +09:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2025-09-28 09:39:44.132 +09:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-09-28 09:39:44.165 +09:30 [DBG] Response markup was updated to include Browser Link script injection.
+2025-09-28 09:39:44.167 +09:30 [DBG] Response markup was updated to include browser refresh script injection.
+2025-09-28 09:39:44.168 +09:30 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/index.html - 200 null text/html;charset=utf-8 1143.5123ms
+2025-09-28 09:39:44.200 +09:30 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/swagger-ui.css - null null
+2025-09-28 09:39:44.201 +09:30 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/swagger-ui-standalone-preset.js - null null
+2025-09-28 09:39:44.205 +09:30 [INF] Request starting HTTP/2 GET https://localhost:7125/_vs/browserLink - null null
+2025-09-28 09:39:44.207 +09:30 [DBG] 1 candidate(s) found for the request path '/swagger/swagger-ui.css'
+2025-09-28 09:39:44.200 +09:30 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/swagger-ui-bundle.js - null null
+2025-09-28 09:39:44.212 +09:30 [INF] Request starting HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-28 09:39:44.224 +09:30 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/swagger-ui.css' for the request path '/swagger/swagger-ui.css'
+2025-09-28 09:39:44.220 +09:30 [DBG] 1 candidate(s) found for the request path '/swagger/swagger-ui-standalone-preset.js'
+2025-09-28 09:39:44.249 +09:30 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/swagger-ui.css'
+2025-09-28 09:39:44.227 +09:30 [DBG] 1 candidate(s) found for the request path '/swagger/swagger-ui-bundle.js'
+2025-09-28 09:39:44.275 +09:30 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/swagger-ui-standalone-preset.js' for the request path '/swagger/swagger-ui-standalone-preset.js'
+2025-09-28 09:39:44.275 +09:30 [INF] Request finished HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 63.6278ms
+2025-09-28 09:39:44.277 +09:30 [DBG] Request did not match any endpoints
+2025-09-28 09:39:44.282 +09:30 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/swagger-ui-standalone-preset.js'
+2025-09-28 09:39:44.279 +09:30 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/swagger-ui-bundle.js' for the request path '/swagger/swagger-ui-bundle.js'
+2025-09-28 09:39:44.289 +09:30 [DBG] The request path /swagger/swagger-ui.css does not match an existing file
+2025-09-28 09:39:44.289 +09:30 [DBG] Request did not match any endpoints
+2025-09-28 09:39:44.291 +09:30 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/swagger-ui-bundle.js'
+2025-09-28 09:39:44.294 +09:30 [DBG] The request path /swagger/swagger-ui-standalone-preset.js does not match an existing file
+2025-09-28 09:39:44.296 +09:30 [DBG] Request did not match any endpoints
+2025-09-28 09:39:44.299 +09:30 [DBG] The request path /swagger/swagger-ui-bundle.js does not match an existing file
+2025-09-28 09:39:44.329 +09:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-09-28 09:39:44.334 +09:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-09-28 09:39:44.336 +09:30 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/swagger-ui.css - 200 143943 text/css 135.523ms
+2025-09-28 09:39:44.339 +09:30 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 138.1816ms
+2025-09-28 09:39:44.366 +09:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-09-28 09:39:44.369 +09:30 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 168.5569ms
+2025-09-28 09:39:44.383 +09:30 [INF] Request finished HTTP/2 GET https://localhost:7125/_vs/browserLink - 200 null text/javascript; charset=UTF-8 178.8855ms
+2025-09-28 09:39:44.499 +09:30 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/favicon-32x32.png - null null
+2025-09-28 09:39:44.503 +09:30 [DBG] 1 candidate(s) found for the request path '/swagger/favicon-32x32.png'
+2025-09-28 09:39:44.504 +09:30 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/favicon-32x32.png' for the request path '/swagger/favicon-32x32.png'
+2025-09-28 09:39:44.506 +09:30 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/favicon-32x32.png'
+2025-09-28 09:39:44.508 +09:30 [DBG] Request did not match any endpoints
+2025-09-28 09:39:44.509 +09:30 [DBG] The request path /swagger/favicon-32x32.png does not match an existing file
+2025-09-28 09:39:44.510 +09:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-09-28 09:39:44.512 +09:30 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/favicon-32x32.png - 200 628 image/png 12.5323ms
+2025-09-28 09:39:44.530 +09:30 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - null null
+2025-09-28 09:39:44.533 +09:30 [DBG] 1 candidate(s) found for the request path '/swagger/v1/swagger.json'
+2025-09-28 09:39:44.534 +09:30 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/v1/swagger.json' for the request path '/swagger/v1/swagger.json'
+2025-09-28 09:39:44.537 +09:30 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/v1/swagger.json'
+2025-09-28 09:39:44.538 +09:30 [DBG] Request did not match any endpoints
+2025-09-28 09:39:44.539 +09:30 [DBG] The request path /swagger/v1/swagger.json does not match an existing file
+2025-09-28 09:39:44.689 +09:30 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 159.192ms
+2025-09-28 09:39:50.587 +09:30 [DBG] Authentication of the HTTPS connection timed out.
+2025-09-28 09:39:50.587 +09:30 [DBG] Authentication of the HTTPS connection timed out.
+2025-09-28 09:39:50.591 +09:30 [DBG] Connection id "0HNFU4D8S8H42" stopped.
+2025-09-28 09:39:50.592 +09:30 [DBG] Connection id "0HNFU4D8S8H41" stopped.
+2025-09-28 09:39:50.594 +09:30 [DBG] Connection id "0HNFU4D8S8H42" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-09-28 09:39:50.596 +09:30 [DBG] Connection id "0HNFU4D8S8H41" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-09-28 09:43:32.290 +09:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-09-28 09:43:32.386 +09:30 [WRN] The WebRootPath was not found: D:\Professional\Aus\CDU\Class\Semester 4 2025\PRT681-Software_Practice\PRT681_S2025_Final_Project_Group-A\Dev\Code\NTVibeEventApp\NTVibeEventApp.Server\wwwroot. Static files may be unavailable.
+2025-09-28 09:43:32.394 +09:30 [DBG] Hosting starting
+2025-09-28 09:43:32.557 +09:30 [WRN] The WebRootPath was not found: D:\Professional\Aus\CDU\Class\Semester 4 2025\PRT681-Software_Practice\PRT681_S2025_Final_Project_Group-A\Dev\Code\NTVibeEventApp\NTVibeEventApp.Server\wwwroot. Static files may be unavailable.
+2025-09-28 09:43:32.624 +09:30 [INF] Now listening on: https://localhost:7125
+2025-09-28 09:43:32.626 +09:30 [INF] Now listening on: http://localhost:5138
+2025-09-28 09:43:32.627 +09:30 [DBG] Loaded hosting startup assembly NTVibeEventApp.Server
+2025-09-28 09:43:32.628 +09:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.SpaProxy
+2025-09-28 09:43:32.629 +09:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-09-28 09:43:32.629 +09:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-09-28 09:43:32.631 +09:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-28 09:43:32.632 +09:30 [INF] Hosting environment: Development
+2025-09-28 09:43:32.632 +09:30 [INF] Content root path: D:\Professional\Aus\CDU\Class\Semester 4 2025\PRT681-Software_Practice\PRT681_S2025_Final_Project_Group-A\Dev\Code\NTVibeEventApp\NTVibeEventApp.Server
+2025-09-28 09:43:32.633 +09:30 [DBG] Hosting started
+2025-09-28 09:43:32.803 +09:30 [DBG] Connection id "0HNFU4FE33F79" accepted.
+2025-09-28 09:43:32.803 +09:30 [DBG] Connection id "0HNFU4FE33F78" accepted.
+2025-09-28 09:43:32.806 +09:30 [DBG] Connection id "0HNFU4FE33F79" started.
+2025-09-28 09:43:32.807 +09:30 [DBG] Connection id "0HNFU4FE33F78" started.
+2025-09-28 09:43:34.053 +09:30 [DBG] Connection id "0HNFU4FE33F78" reset.
+2025-09-28 09:43:34.053 +09:30 [DBG] Connection id "0HNFU4FE33F79" reset.
+2025-09-28 09:43:34.076 +09:30 [DBG] Failed to authenticate HTTPS connection.
+Microsoft.AspNetCore.Connections.ConnectionResetException: An existing connection was forcibly closed by the remote host.
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   --- End of inner exception stack trace ---
+   at System.IO.Pipelines.Pipe.GetReadResult(ReadResult& result)
+   at System.IO.Pipelines.Pipe.GetReadAsyncResult()
+   at System.IO.Pipelines.Pipe.DefaultPipeReader.GetResult(Int16 token)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.DuplexPipeStream.ReadAsyncInternal(Memory`1 destination, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken, Int32 estimatedSize)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-09-28 09:43:34.076 +09:30 [DBG] Failed to authenticate HTTPS connection.
+Microsoft.AspNetCore.Connections.ConnectionResetException: An existing connection was forcibly closed by the remote host.
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   --- End of inner exception stack trace ---
+   at System.IO.Pipelines.Pipe.GetReadResult(ReadResult& result)
+   at System.IO.Pipelines.Pipe.GetReadAsyncResult()
+   at System.IO.Pipelines.Pipe.DefaultPipeReader.GetResult(Int16 token)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.DuplexPipeStream.ReadAsyncInternal(Memory`1 destination, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken, Int32 estimatedSize)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-09-28 09:43:34.121 +09:30 [DBG] Connection id "0HNFU4FE33F7A" accepted.
+2025-09-28 09:43:34.136 +09:30 [DBG] Connection id "0HNFU4FE33F7A" started.
+2025-09-28 09:43:34.137 +09:30 [DBG] Connection id "0HNFU4FE33F79" stopped.
+2025-09-28 09:43:34.137 +09:30 [DBG] Connection id "0HNFU4FE33F78" stopped.
+2025-09-28 09:43:34.143 +09:30 [DBG] Connection id "0HNFU4FE33F78" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-09-28 09:43:34.143 +09:30 [DBG] Connection id "0HNFU4FE33F79" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-09-28 09:43:34.153 +09:30 [DBG] Connection 0HNFU4FE33F7A established using the following protocol: "Tls13"
+2025-09-28 09:43:34.296 +09:30 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger - null null
+2025-09-28 09:43:34.328 +09:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-09-28 09:43:34.345 +09:30 [DBG] 1 candidate(s) found for the request path '/swagger'
+2025-09-28 09:43:34.350 +09:30 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/swagger'
+2025-09-28 09:43:34.353 +09:30 [DBG] Request matched endpoint 'Fallback {*path:nonfile}'
+2025-09-28 09:43:34.355 +09:30 [DBG] Matched endpoint 'Fallback {*path:nonfile}' is a fallback endpoint.
+2025-09-28 09:43:34.360 +09:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-09-28 09:43:34.375 +09:30 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger - 301 0 null 85.3257ms
+2025-09-28 09:43:34.403 +09:30 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/index.html - null null
+2025-09-28 09:43:34.409 +09:30 [DBG] 1 candidate(s) found for the request path '/swagger/index.html'
+2025-09-28 09:43:34.414 +09:30 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/index.html' for the request path '/swagger/index.html'
+2025-09-28 09:43:34.417 +09:30 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/index.html'
+2025-09-28 09:43:34.419 +09:30 [DBG] Request did not match any endpoints
+2025-09-28 09:43:34.422 +09:30 [DBG] The request path /swagger/index.html does not match an existing file
+2025-09-28 09:43:34.511 +09:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2025-09-28 09:43:34.514 +09:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-09-28 09:43:34.539 +09:30 [DBG] Response markup was updated to include Browser Link script injection.
+2025-09-28 09:43:34.541 +09:30 [DBG] Response markup was updated to include browser refresh script injection.
+2025-09-28 09:43:34.542 +09:30 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/index.html - 200 null text/html;charset=utf-8 138.472ms
+2025-09-28 09:43:34.556 +09:30 [INF] Request starting HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-28 09:43:34.560 +09:30 [INF] Request starting HTTP/2 GET https://localhost:7125/_vs/browserLink - null null
+2025-09-28 09:43:34.569 +09:30 [INF] Request finished HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 13.2527ms
+2025-09-28 09:43:34.608 +09:30 [INF] Request finished HTTP/2 GET https://localhost:7125/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.5437ms
+2025-09-28 09:43:40.391 +09:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-09-28 09:43:40.484 +09:30 [WRN] The WebRootPath was not found: D:\Professional\Aus\CDU\Class\Semester 4 2025\PRT681-Software_Practice\PRT681_S2025_Final_Project_Group-A\Dev\Code\NTVibeEventApp\NTVibeEventApp.Server\wwwroot. Static files may be unavailable.
+2025-09-28 09:43:40.492 +09:30 [DBG] Hosting starting
+2025-09-28 09:43:40.667 +09:30 [WRN] The WebRootPath was not found: D:\Professional\Aus\CDU\Class\Semester 4 2025\PRT681-Software_Practice\PRT681_S2025_Final_Project_Group-A\Dev\Code\NTVibeEventApp\NTVibeEventApp.Server\wwwroot. Static files may be unavailable.
+2025-09-28 09:43:40.732 +09:30 [INF] Now listening on: https://localhost:7125
+2025-09-28 09:43:40.734 +09:30 [INF] Now listening on: http://localhost:5138
+2025-09-28 09:43:40.735 +09:30 [DBG] Loaded hosting startup assembly NTVibeEventApp.Server
+2025-09-28 09:43:40.736 +09:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.SpaProxy
+2025-09-28 09:43:40.736 +09:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-09-28 09:43:40.737 +09:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-09-28 09:43:40.738 +09:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-28 09:43:40.739 +09:30 [INF] Hosting environment: Development
+2025-09-28 09:43:40.740 +09:30 [INF] Content root path: D:\Professional\Aus\CDU\Class\Semester 4 2025\PRT681-Software_Practice\PRT681_S2025_Final_Project_Group-A\Dev\Code\NTVibeEventApp\NTVibeEventApp.Server
+2025-09-28 09:43:40.741 +09:30 [DBG] Hosting started
+2025-09-28 09:43:41.027 +09:30 [DBG] Connection id "0HNFU4FGHH0S9" accepted.
+2025-09-28 09:43:41.027 +09:30 [DBG] Connection id "0HNFU4FGHH0SA" accepted.
+2025-09-28 09:43:41.031 +09:30 [DBG] Connection id "0HNFU4FGHH0S9" started.
+2025-09-28 09:43:41.032 +09:30 [DBG] Connection id "0HNFU4FGHH0SA" started.
+2025-09-28 09:43:41.512 +09:30 [DBG] Connection id "0HNFU4FGHH0SB" accepted.
+2025-09-28 09:43:41.513 +09:30 [DBG] Connection id "0HNFU4FGHH0SB" started.
+2025-09-28 09:43:41.531 +09:30 [DBG] Connection 0HNFU4FGHH0SB established using the following protocol: "Tls13"
+2025-09-28 09:43:41.585 +09:30 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger - null null
+2025-09-28 09:43:41.622 +09:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-09-28 09:43:41.639 +09:30 [DBG] 1 candidate(s) found for the request path '/swagger'
+2025-09-28 09:43:41.643 +09:30 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/swagger'
+2025-09-28 09:43:41.646 +09:30 [DBG] Request matched endpoint 'Fallback {*path:nonfile}'
+2025-09-28 09:43:41.648 +09:30 [DBG] Matched endpoint 'Fallback {*path:nonfile}' is a fallback endpoint.
+2025-09-28 09:43:41.652 +09:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-09-28 09:43:41.665 +09:30 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger - 301 0 null 86.6238ms
+2025-09-28 09:43:41.674 +09:30 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/index.html - null null
+2025-09-28 09:43:41.681 +09:30 [DBG] 1 candidate(s) found for the request path '/swagger/index.html'
+2025-09-28 09:43:41.686 +09:30 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/index.html' for the request path '/swagger/index.html'
+2025-09-28 09:43:41.688 +09:30 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/index.html'
+2025-09-28 09:43:41.689 +09:30 [DBG] Request did not match any endpoints
+2025-09-28 09:43:41.691 +09:30 [DBG] The request path /swagger/index.html does not match an existing file
+2025-09-28 09:43:41.775 +09:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2025-09-28 09:43:41.776 +09:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-09-28 09:43:41.790 +09:30 [DBG] Response markup was updated to include Browser Link script injection.
+2025-09-28 09:43:41.791 +09:30 [DBG] Response markup was updated to include browser refresh script injection.
+2025-09-28 09:43:41.792 +09:30 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/index.html - 200 null text/html;charset=utf-8 118.5886ms
+2025-09-28 09:43:41.823 +09:30 [INF] Request starting HTTP/2 GET https://localhost:7125/_vs/browserLink - null null
+2025-09-28 09:43:41.823 +09:30 [INF] Request starting HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-28 09:43:41.842 +09:30 [INF] Request finished HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 18.4374ms
+2025-09-28 09:43:41.869 +09:30 [INF] Request finished HTTP/2 GET https://localhost:7125/_vs/browserLink - 200 null text/javascript; charset=UTF-8 46.6053ms
+2025-09-28 09:43:41.968 +09:30 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - null null
+2025-09-28 09:43:41.970 +09:30 [DBG] 1 candidate(s) found for the request path '/swagger/v1/swagger.json'
+2025-09-28 09:43:41.971 +09:30 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/v1/swagger.json' for the request path '/swagger/v1/swagger.json'
+2025-09-28 09:43:41.975 +09:30 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/v1/swagger.json'
+2025-09-28 09:43:41.977 +09:30 [DBG] Request did not match any endpoints
+2025-09-28 09:43:41.981 +09:30 [DBG] The request path /swagger/v1/swagger.json does not match an existing file
+2025-09-28 09:43:42.050 +09:30 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 82.0861ms
+2025-09-28 09:43:51.047 +09:30 [DBG] Authentication of the HTTPS connection timed out.
+2025-09-28 09:43:51.047 +09:30 [DBG] Authentication of the HTTPS connection timed out.
+2025-09-28 09:43:51.052 +09:30 [DBG] Connection id "0HNFU4FGHH0SA" stopped.
+2025-09-28 09:43:51.052 +09:30 [DBG] Connection id "0HNFU4FGHH0S9" stopped.
+2025-09-28 09:43:51.057 +09:30 [DBG] Connection id "0HNFU4FGHH0SA" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-09-28 09:43:51.057 +09:30 [DBG] Connection id "0HNFU4FGHH0S9" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-09-28 09:46:32.894 +09:30 [DBG] Connection id "0HNFU4FGHH0SB" received FIN.
+2025-09-28 09:46:32.938 +09:30 [DBG] Connection id "0HNFU4FGHH0SB" is closing.
+2025-09-28 09:46:32.944 +09:30 [DBG] The connection queue processing loop for 0HNFU4FGHH0SB completed.
+2025-09-28 09:46:32.945 +09:30 [DBG] Connection id "0HNFU4FGHH0SB" is closed. The last processed stream ID was 11.
+2025-09-28 09:46:32.950 +09:30 [DBG] Connection id "0HNFU4FGHH0SB" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-09-28 09:46:32.953 +09:30 [DBG] Connection id "0HNFU4FGHH0SB" stopped.
