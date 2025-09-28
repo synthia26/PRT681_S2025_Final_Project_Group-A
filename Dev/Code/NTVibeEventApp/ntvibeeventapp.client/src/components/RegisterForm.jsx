@@ -2,14 +2,18 @@
 import { registerUser } from "../api/auth";
 
 export default function RegisterForm() {
-    const [form, setForm] = useState({ username: "", email: "", password: "" });
+    const [form, setForm] = useState({
+        username: "",
+        email: "",
+        password: "",
+        role: "User",
+    });
     const [message, setMessage] = useState("");
 
-    // This function updates form state when typing
     const handleChange = (e) => {
         setForm({
             ...form,
-            [e.target.name]: e.target.value,   // take the "name" of the input and update it
+            [e.target.name]: e.target.value,
         });
     };
 
@@ -30,33 +34,44 @@ export default function RegisterForm() {
 
                 <input
                     type="text"
-                    name="username"                 // ✅ must match state keys
+                    name="username"
+                    className="form-control"
                     placeholder="👤 Username"
                     value={form.username}
                     onChange={handleChange}
                     required
-                    style={styles.input}
                 />
 
                 <input
                     type="email"
-                    name="email"                    // ✅ must match state keys
+                    name="email"
+                    className="form-control"
                     placeholder="📧 Email"
                     value={form.email}
                     onChange={handleChange}
                     required
-                    style={styles.input}
                 />
 
                 <input
                     type="password"
-                    name="password"                 // ✅ must match state keys
+                    name="password"
+                    className="form-control"
                     placeholder="🔒 Password"
                     value={form.password}
                     onChange={handleChange}
                     required
-                    style={styles.input}
                 />
+
+                {/* Role Dropdown */}
+                <select
+                    name="role"
+                    className="form-select"
+                    value={form.role}
+                    onChange={handleChange}
+                >
+                    <option value="User">User</option>
+                    <option value="Ograniser">Organiser</option>
+                </select>
 
                 <button type="submit" style={styles.button}>
                     Register
@@ -74,7 +89,7 @@ const styles = {
         justifyContent: "center",
         alignItems: "center",
         minHeight: "80vh",
-        background: "linear-gradient(135deg, #E95420, #FFB347)",
+        background: "linear-gradient(135deg, #E95420, #FFB347)", // keep your gradient
     },
     form: {
         background: "white",
@@ -90,13 +105,6 @@ const styles = {
         textAlign: "center",
         color: "#E95420",
         marginBottom: "10px",
-    },
-    input: {
-        padding: "12px",
-        borderRadius: "6px",
-        border: "1px solid #ccc",
-        fontSize: "1rem",
-        outline: "none",
     },
     button: {
         backgroundColor: "#006400",
