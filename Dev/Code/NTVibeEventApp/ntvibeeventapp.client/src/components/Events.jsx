@@ -1,4 +1,5 @@
-﻿import React, { useEffect, useState } from "react";
+﻿import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import { getEvents } from "../api/events";
 
 export default function Events() {
@@ -41,8 +42,9 @@ export default function Events() {
                         <h3>{event.title}</h3>
                         <p><strong>Date:</strong> {new Date(event.date).toLocaleDateString()}</p>
                         <p><strong>Location:</strong> {event.location}</p>
-                        <p>{event.description}</p>
-                        
+                        <p>{event.description.substring(0, 200)}...</p>
+                        <Link to={`/events/${event.id}`} style={styles.detailsButton}>View Details →
+                        </Link>
                     </div>
                 ))}
             </div>

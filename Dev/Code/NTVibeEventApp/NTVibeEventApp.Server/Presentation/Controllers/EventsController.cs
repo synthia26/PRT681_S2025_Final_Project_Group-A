@@ -27,6 +27,17 @@ namespace NTVibeEventApp.Server.Presentation.Controllers
             return Ok(events);
         }
 
+        [HttpGet("{id}")]
+        public IActionResult GetEventById(int id)
+        {
+            var events = ReadEventsFromFile();
+            var ev = events.FirstOrDefault(e => e.Id == id);
+
+            if (ev == null) return NotFound();
+            return Ok(ev);
+        }
+
+
         // POST: api/events
         [HttpPost]
         public IActionResult CreateEvent([FromForm] Event newEvent, IFormFile? banner)

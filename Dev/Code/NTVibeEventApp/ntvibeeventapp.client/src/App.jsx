@@ -5,6 +5,7 @@ import Login from './pages/Login.jsx';
 import Register from './pages/Register.jsx';
 import Events from './pages/Events.jsx';
 import AddEvent from './pages/AddEvent.jsx';
+import EventDetails from "./pages/EventDetails.jsx";
 import Navbar from './components/Navbar.jsx';
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
                 <Route path="/register" element={<Register />} />
                 <Route path="/events" element={<Events />} />
                 <Route path="/addevents" element={<AddEvent />} />
+                <Route path="/events/:id" element={<EventDetails />} />
                 {/* AddEvents route can go here too */}
             </Routes>
         </Router>
