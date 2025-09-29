@@ -1,142 +1,106 @@
-﻿import { useState } from "react";
-import {
-    Card,
-    CardHeader,
-    CardBody,
-    CardTitle,
-    CardActions
-} from "@progress/kendo-react-layout";
-import events from "../data/events";
+﻿import React from 'react';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import bannerImage from '../assets/banner.jpg';
 
 export default function Home() {
-    const [search, setSearch] = useState("");
-
-    const handleSearch = (e) => {
-        e.preventDefault();
-        alert(`Searching for: ${search}`); // later connect to backend
-    };
-
     return (
-        <div
-            style={{
-                minHeight: "100vh",
-                display: "flex",
-                flexDirection: "column",
-                background: "linear-gradient(135deg, #E95420, #FFB347)",
-                color: "white",
-                fontFamily: "Arial, sans-serif",
-            }}
-        >
-            {/* Top Menu */}
-            <header
-                style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    padding: "15px 30px",
-                    backgroundColor: "rgba(0,0,0,0.2)",
-                }}
-            >
-                <h2 style={{ margin: 0 }}>🌴 NT Vibe</h2>
-                <nav>
-                    <a href="/" style={{ color: "white", marginRight: "20px" }}>Home</a>
-                    <a href="/register" style={{ color: "white", marginRight: "20px" }}>Register</a>
-                    <a href="/login" style={{ color: "white" }}>Login</a>
-                </nav>
-            </header>
+        <div style={{ width: "100%", overflowX: "hidden" }}>
+            
 
-            {/* Main Content */}
-            <main style={{ flex: 1, textAlign: "center", padding: "40px" }}>
-                <h1 style={{ fontSize: "3rem", marginBottom: "20px" }}>
-                    NT Vibe Event Organiser
-                </h1>
-                <p style={{ fontSize: "1.2rem", maxWidth: "700px", margin: "0 auto 30px" }}>
-                    Bringing people together in the heart of the Northern Territory.
-                    Discover events, RSVP instantly, and be part of vibrant community
-                    celebrations under the Top End skies.
-                </p>
-
-                {/* Search Bar */}
-                <form onSubmit={handleSearch} style={{ marginBottom: "40px" }}>
+            {/* Banner Section */}
+            <div style={styles.banner}>
+                <img src={bannerImage} alt="Event Banner" style={styles.bannerImage} />
+                <div style={styles.searchContainer}>
                     <input
                         type="text"
-                        placeholder="Search events..."
-                        value={search}
-                        onChange={(e) => setSearch(e.target.value)}
-                        style={{
-                            padding: "10px",
-                            width: "300px",
-                            borderRadius: "5px 0 0 5px",
-                            border: "none",
-                        }}
+                        placeholder="🔍 Search events..."
+                        style={styles.searchBar}
                     />
-                    <button
-                        type="submit"
-                        style={{
-                            padding: "10px 20px",
-                            border: "none",
-                            backgroundColor: "#006400",
-                            color: "white",
-                            borderRadius: "0 5px 5px 0",
-                            cursor: "pointer",
-                        }}
-                    >
-                        Search
-                    </button>
-                </form>
+                </div>
+            </div>
 
-                {/* Event Cards */}
-                <div style={{ display: "flex", gap: "20px", justifyContent: "center", flexWrap: "wrap" }}>
-                    {events.map((event) => (
-                        <Card key={event.id} style={{ width: 300 }}>
-                            <CardHeader>
-                                <img
-                                    src={event.image}
-                                    alt={event.title}
-                                    style={{ width: "100%", borderRadius: "6px 6px 0 0" }}
-                                />
-                            </CardHeader>
-                            <CardBody>
-                                <CardTitle>{event.title}</CardTitle>
-                                <p style={{ fontSize: "0.9rem", margin: "10px 0" }}>{event.description}</p>
-                                <p><strong>Date:</strong> {new Date(event.date).toDateString()}</p>
-                                <p><strong>Location:</strong> {event.location}</p>
-                            </CardBody>
-                            <CardActions>
-                                <button
-                                    style={{
-                                        background: "#007bff",
-                                        color: "white",
-                                        padding: "8px 14px",
-                                        border: "none",
-                                        borderRadius: "4px",
-                                        cursor: "pointer",
-                                    }}
-                                >
-                                    View Details
-                                </button>
-                            </CardActions>
-                        </Card>
+            {/* Featured Events */}
+            <section style={styles.featuredSection}>
+                <h2 style={styles.sectionTitle}>🎉 Upcoming Featured Events</h2>
+                <div style={styles.eventList}>
+                    {/* Example events */}
+                    {["Event A", "Event B", "Event C"].map((event, i) => (
+                        <div key={i} style={styles.eventCard}>
+                            <h3>{event}</h3>
+                            <p>Date: TBD</p>
+                            <p>Location: TBD</p>
+                        </div>
                     ))}
                 </div>
 
-                {/* Explore More Button */}
-                <button
-                    style={{
-                        padding: "12px 24px",
-                        fontSize: "1rem",
-                        fontWeight: "bold",
-                        backgroundColor: "#006400",
-                        color: "white",
-                        border: "none",
-                        borderRadius: "8px",
-                        cursor: "pointer",
-                        marginTop: "30px"
-                    }}
-                >
-                    Explore More
-                </button>
-            </main>
+                <button style={styles.moreButton}>View More Events</button>
+            </section>
+
+            <Footer />
         </div>
     );
 }
+
+const styles = {
+    banner: {
+        position: 'relative',
+        width: '100vw',
+        height: '400px',
+        overflow: 'hidden',
+        margin: 0,
+        padding: 0
+    },
+    bannerImage: {
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover'
+    },
+    searchContainer: {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        zIndex: 1
+    },
+    searchBar: {
+        padding: '15px 20px',
+        fontSize: '1.2rem',
+        borderRadius: '8px',
+        border: 'none',
+        width: '300px',
+        boxShadow: '0 2px 10px rgba(0,0,0,0.2)',
+    },
+    featuredSection: {
+        padding: '40px 20px',
+        textAlign: 'center',
+    },
+    sectionTitle: {
+        fontSize: '2rem',
+        marginBottom: '30px',
+    },
+    eventList: {
+        display: 'flex',
+        justifyContent: 'center',
+        gap: '20px',
+        flexWrap: 'wrap',
+    },
+    eventCard: {
+        backgroundColor: '#fff',
+        padding: '20px',
+        borderRadius: '12px',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+        width: '250px',
+        textAlign: 'left',
+    },
+    moreButton: {
+        marginTop: '30px',
+        padding: '12px 24px',
+        backgroundColor: '#006400',
+        color: '#fff',
+        border: 'none',
+        borderRadius: '6px',
+        fontSize: '1rem',
+        cursor: 'pointer',
+    },
+};

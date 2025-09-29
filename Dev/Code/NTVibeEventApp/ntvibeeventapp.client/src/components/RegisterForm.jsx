@@ -70,7 +70,7 @@ export default function RegisterForm() {
                     onChange={handleChange}
                 >
                     <option value="User">User</option>
-                    <option value="Ograniser">Organiser</option>
+                    <option value="Organiser">Organiser</option>
                 </select>
 
                 <button type="submit" style={styles.button}>

@@ -26,7 +26,7 @@ namespace NTVibeEventApp.Server.BLL.Services
                 Username = dto.Username,
                 Email = dto.Email,
                 PasswordHash = HashPassword(dto.Password),
-                Role = "User"
+                Role = dto.Role
             };
 
             await _repo.AddAsync(user);

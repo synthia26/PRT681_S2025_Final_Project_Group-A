@@ -1,12 +1,14 @@
-﻿import { useState } from "react";
+﻿import React, { useState } from "react";
 import { loginUser } from "../api/auth";
+import { useAuth } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginForm() {
     const [form, setForm] = useState({ email: "", password: "" });
     const [message, setMessage] = useState("");
+    const { login } = useAuth(); // ✅ import login function from context
+    const navigate = useNavigate();
 
-
-    // handle input change
     const handleChange = (e) => {
         setForm({
             ...form,
@@ -14,36 +16,27 @@ export default function LoginForm() {
         });
     };
 
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await loginUser(form);
-            localStorage.setItem("user", JSON.stringify(res.data)); // store user
+            const userData = await loginUser(form); // this uses the Axios version now
+            login(userData);
             setMessage("Login successful!");
+            navigate("/");
         } catch (err) {
-            setMessage(err.response?.data || "Invalid credentials");
+            console.error("Login error:", err);
+            setMessage(err.response?.data || "Login failed");
         }
     };
 
     return (
         <div style={styles.container}>
             <form onSubmit={handleSubmit} style={styles.form}>
-                <h2 style={styles.heading}>Create an Account</h2>
-
-                <input
-                    type="text"
-                    name="username"                 // ✅ must match state keys
-                    placeholder="👤 Username"
-                    value={form.username}
-                    onChange={handleChange}
-                    required
-                    style={styles.input}
-                />
+                <h2 style={styles.heading}>Login</h2>
 
                 <input
                     type="email"
-                    name="email"                    // ✅ must match state keys
+                    name="email"
                     placeholder="📧 Email"
                     value={form.email}
                     onChange={handleChange}
@@ -53,7 +46,7 @@ export default function LoginForm() {
 
                 <input
                     type="password"
-                    name="password"                 // ✅ must match state keys
+                    name="password"
                     placeholder="🔒 Password"
                     value={form.password}
                     onChange={handleChange}
@@ -62,7 +55,7 @@ export default function LoginForm() {
                 />
 
                 <button type="submit" style={styles.button}>
-                    Register
+                    Login
                 </button>
 
                 {message && <p style={styles.message}>{message}</p>}
@@ -117,18 +110,3 @@ const styles = {
         color: "#E95420",
     },
 };
-
-/*
-    return (
-        <form onSubmit={handleSubmit}>
-            <h2>Login</h2>
-            <input placeholder="Email" value={form.email}
-                onChange={(e) => setForm({ ...form, email: e.target.value })} />
-            <input type="password" placeholder="Password" value={form.password}
-                onChange={(e) => setForm({ ...form, password: e.target.value })} />
-            <button type="submit">Login</button>
-            <p>{message}</p>
-        </form>
-    );
-}
-*/

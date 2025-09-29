@@ -1,26 +1,24 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "./pages/Home";      // import Home component
-import RegisterForm from "./components/RegisterForm";
-import LoginForm from "./components/LoginForm";
-import Events from "./components/EventList";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home.jsx';
+import Login from './pages/Login.jsx';
+import Register from './pages/Register.jsx';
+import Events from './pages/Events.jsx';
+import Navbar from './components/Navbar.jsx';
 
-
-export default function App() {
+const App = () => {
     return (
         <Router>
-            <nav>
-                <Link to="/">Home</Link> |{" "}
-                <Link to="/register">Register</Link> |{" "}
-                <Link to="/login">Login</Link>
-                <Link to="/events">Events</Link>
-            </nav>
-
+            <Navbar />
             <Routes>
-                <Route path="/" element={<Home />} />          {/* shows Home.jsx */}
-                <Route path="/register" element={<RegisterForm />} />
-                <Route path="/login" element={<LoginForm />} />
+                <Route path="/" element={<Home />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
                 <Route path="/events" element={<Events />} />
+                {/* AddEvents route can go here too */}
             </Routes>
         </Router>
     );
-}
+};
+
+export default App;
