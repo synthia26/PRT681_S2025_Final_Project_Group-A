@@ -18,3 +18,7 @@ export const getEventById = async (id) => {
     const response = await axios.get(`${API_URL}/${id}`);
     return response.data;
 };
+
+export const deleteEvent = async (id) => {
+    return await axios.delete(`${API_URL}/${id}`);
+};
