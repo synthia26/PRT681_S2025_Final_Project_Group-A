@@ -65,6 +65,24 @@ namespace NTVibeEventApp.Server.Presentation.Controllers
             return Ok(newEvent);
         }
 
+        [HttpDelete("{id}")]
+        public IActionResult DeleteEvent(int id)
+        {
+            var events = ReadEventsFromFile();
+            var ev = events.FirstOrDefault(e => e.Id == id);
+
+            if (ev == null)
+                return NotFound("Event not found");
+
+            // Remove from list
+            events.Remove(ev);
+
+            // Save back to JSON file
+            WriteEventsToFile(events);
+
+            return Ok(new { message = "Event deleted successfully" });
+        }
+
         // Helper: read JSON file
         private List<Event> ReadEventsFromFile()
         {
