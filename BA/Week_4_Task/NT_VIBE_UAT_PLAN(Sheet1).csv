@@ -1,0 +1,20 @@
+﻿ID,Role,Scenario,Preconditions,Steps (high level),Expected Result,Sev
+UAT-ORG-01,Organizer,Create Draft event,Organizer logged in,"Create event with title, dates, venue/suburb, category, cover; Save as Draft","Draft saved, visible in My Events with status Draft",H
+UAT-ORG-02,Organizer,Publish event,Draft exists with required fields,Open draft → Publish,Status Published; event appears in attendee search within 1–2 min,C
+UAT-ORG-03,Organizer,Inline validation on missing required fields,—,Delete title or start time → Publish,Inline errors show field-specific messages; cannot publish,H
+UAT-ORG-04,Organizer,Edit published event → republish,Published event,"Edit description, capacity → Save",Changes visible on detail page; version/audit logged,M
+UAT-ORG-05,Organizer,Unpublish/Cancel event,Published event,Unpublish/Cancel with reason,Event hidden from search; attendees receive notification (email in test inbox),C
+UAT-ATT-01,Attendee,Search & filter events,Published events seeded,"Search by keyword, category, date range, suburb",Accurate results; pagination works; empty state handled,H
+UAT-ATT-02,Attendee,View event details,Published event,Open event page,"Correct title, dates (Darwin TZ), venue map, organizer info, remaining capacity",H
+UAT-ATT-03,Attendee,Buy ticket (success),Payment sandbox ready,Select ticket → Checkout → Pay (success card),"Order ID generated, confirmation screen; email receipt in test inbox",C
+UAT-ATT-04,Attendee,Payment failure handling,—,Pay with decline card,Clear error; cart preserved; retry possible,C
+UAT-ATT-05,Attendee,Sold-out behavior,Capacity reached,Attempt to buy,“Sold out” state; join waitlist (if enabled),H
+UAT-ATT-06,Attendee,Refund/cancel policy surface,Order exists,Request cancel/refund,"Policy shown; if allowed, refund flow triggers sandbox refund email",M
+UAT-ADM-01,Admin,Content moderation,New/flagged event,Approve/Reject with notes,Status updates; organizer notified; audit entry stored,C
+UAT-ADM-02,Admin,User roles & access,Seeded users,Grant Organizer role to attendee; revoke,Access changes take effect; least privilege enforced,C
+UAT-SYS-01,System,Emails & notifications,Test inbox up,"Trigger publish, order, cancel actions","Correct templates, branding, links, timestamps",H
+UAT-ACC-01,A11y,Accessibility sanity,—,"Keyboard-only navigate, images alt text, focus order, basic contrast",Passes WCAG AA sanity checks for MVP,H
+UAT-LOC-01,System,Timezone & dates,Event across midnight,Check renders in Darwin time; ICS export,Correct local times; no off-by-one date errors,H
+UAT-PERF-01,System,Page load smoke,Seeded data (20+ events),Measure first meaningful paint (manual),Acceptable for MVP (document observed metric),M
+UAT-SEC-01,Security,Role-based access,Mixed roles,Ensure attendee cannot access organizer admin pages,Proper 403/redirect; no data leak,C
+,,,,,,
