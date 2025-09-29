@@ -1,5 +1,5 @@
 import React from "react";
-import EventList from "../components/EventList";
+import EventList from "../components/Events";
 
 export default function Events() {
     return (

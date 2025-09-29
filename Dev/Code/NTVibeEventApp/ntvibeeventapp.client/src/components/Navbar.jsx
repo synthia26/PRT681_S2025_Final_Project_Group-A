@@ -10,10 +10,11 @@ export default function Navbar() {
             <div style={styles.logo}>🎫 NT Vibe Together</div>
             <div style={styles.links}>
                 <Link to="/">Home</Link>
-                {!user && <Link to="/login">Login</Link>}
                 {!user && <Link to="/register">Register</Link>}
-                {user && <Link to="/" onClick={logout}>Logout</Link>}
+                {!user && <Link to="/login">Login</Link>}
+                <Link to="/events">Explore Events</Link>
                 {user?.role === "Organiser" && <Link to="/addevents">Add Events</Link>}
+                {user && <Link to="/" onClick={logout}>Logout</Link>}
             </div>
         </nav>
     );
