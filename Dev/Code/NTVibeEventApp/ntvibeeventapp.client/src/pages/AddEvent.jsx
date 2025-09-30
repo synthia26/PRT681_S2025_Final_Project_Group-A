@@ -60,10 +60,11 @@ export default function AddEvent() {
                 />
 
                 <select name="category" value={form.category} onChange={handleChange} style={styles.input}>
-                    <option value="Conference">Conference</option>
-                    <option value="Workshop">Workshop</option>
+                    <option value="Festival">Festival</option>
+                    <option value="Show">Show</option>
                     <option value="Concert">Concert</option>
                     <option value="Meetup">Meetup</option>
+                    <option value="Others">Others</option>
                 </select>
 
                 <input type="file" onChange={handleFileChange} style={styles.input} />

@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using System;
 using Microsoft.AspNetCore.Mvc;
 using NTVibeEventApp.Server.Entities;
@@ -82,6 +82,43 @@ namespace NTVibeEventApp.Server.Presentation.Controllers
 
             return Ok(new { message = "Event deleted successfully" });
         }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateEvent(int id, [FromForm] Event updatedEvent, IFormFile? banner)
+        {
+            var events = ReadEventsFromFile();
+            var existing = events.FirstOrDefault(e => e.Id == id);
+
+            if (existing == null)
+                return NotFound("Event not found");
+
+            // ✅ Update fields
+            existing.Title = updatedEvent.Title;
+            existing.Description = updatedEvent.Description;
+            existing.Date = updatedEvent.Date;
+            existing.Category = updatedEvent.Category;
+            existing.Location = updatedEvent.Location;
+            existing.Price = updatedEvent.Price;
+
+            // ✅ If new banner is uploaded, save it
+            if (banner != null)
+            {
+                var uploadPath = Path.Combine("wwwroot", "uploads");
+                Directory.CreateDirectory(uploadPath);
+
+                var filePath = Path.Combine(uploadPath, banner.FileName);
+                using var stream = new FileStream(filePath, FileMode.Create);
+                banner.CopyTo(stream);
+
+                existing.BannerFilePath = $"uploads/{banner.FileName}";
+            }
+
+            // Save back to JSON
+            WriteEventsToFile(events);
+
+            return Ok(existing);
+        }
+
 
         // Helper: read JSON file
         private List<Event> ReadEventsFromFile()

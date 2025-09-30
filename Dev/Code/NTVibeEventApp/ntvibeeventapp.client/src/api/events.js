@@ -22,3 +22,9 @@ export const getEventById = async (id) => {
 export const deleteEvent = async (id) => {
     return await axios.delete(`${API_URL}/${id}`);
 };
+
+export const updateEvent = async (id, formData) => {
+    return await axios.put(`${API_URL}/${id}`, formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+    });
+};

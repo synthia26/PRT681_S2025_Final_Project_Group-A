@@ -1,14 +1,14 @@
-﻿import { Link } from "react-router-dom";
-import React, { useEffect, useState } from "react";
+﻿import React, { useEffect, useState } from "react";
 import { getEvents } from "../api/events";
+import { Link } from "react-router-dom";
 
-export default function Events() {
+export default function EventList() {
     const [events, setEvents] = useState([]);
-    const [currentPage, setCurrentPage] = useState(1);
-    const eventsPerPage = 6; // adjust how many per page
+    const [page, setPage] = useState(1);
+    const perPage = 6; // events per page
 
     useEffect(() => {
-        async function fetchData() {
+        async function fetchEvents() {
             try {
                 const data = await getEvents();
                 setEvents(data);
@@ -16,109 +16,69 @@ export default function Events() {
                 console.error("Failed to fetch events:", err);
             }
         }
-        fetchData();
+        fetchEvents();
     }, []);
 
     // Pagination logic
-    const indexOfLastEvent = currentPage * eventsPerPage;
-    const indexOfFirstEvent = indexOfLastEvent - eventsPerPage;
-    const currentEvents = events.slice(indexOfFirstEvent, indexOfLastEvent);
+    const totalPages = Math.ceil(events.length / perPage);
+    const paginatedEvents = events.slice((page - 1) * perPage, page * perPage);
 
-    const totalPages = Math.ceil(events.length / eventsPerPage);
+    if (events.length === 0) {
+        return (
+            <div className="container text-center my-5">
+                <h3>No upcoming events</h3>
+            </div>
+        );
+    }
 
     return (
-        <div style={styles.container}>
-            <h2 style={styles.title}>📅 All Events</h2>
-            <div style={styles.grid}>
-                {currentEvents.map((event) => (
-                    <div key={event.id} style={styles.card}>
-                        {event.bannerFilePath && (
-                            <img
-                                src={`https://localhost:7125/${event.bannerFilePath}`}
-                                alt="Event Banner"
-                                style={styles.image}
-                            />
-                        )}
-                        <h3>{event.title}</h3>
-                        <p><strong>Date:</strong> {new Date(event.date).toLocaleDateString()}</p>
-                        <p><strong>Location:</strong> {event.location}</p>
-                        <p>{event.description.substring(0, 200)}...</p>
-                        <Link to={`/events/${event.id}`} style={styles.detailsButton}>View Details →
-                        </Link>
+        <div className="container my-4">
+            <h2 className="mb-4">Upcoming Events</h2>
+            <div className="row">
+                {paginatedEvents.map((event) => (
+                    <div className="col-md-4 mb-3" key={event.id}>
+                        <div className="card shadow-sm">
+                            {event.bannerFilePath && (
+                                <img
+                                    src={`https://localhost:7125/${event.bannerFilePath}`}
+                                    className="card-img-top"
+                                    alt={event.title}
+                                    style={{ height: "200px", objectFit: "cover" }}
+                                />
+                            )}
+                            <div className="card-body">
+                                <h5 className="card-title">{event.title}</h5>
+                                <p className="card-text">
+                                    {event.date}
+                                </p>
+                                <Link to={`/events/${event.id}`} className="btn btn-primary btn-sm">
+                                    View Details
+                                </Link>
+                            </div>
+                        </div>
                     </div>
                 ))}
             </div>
 
-            {/* Pagination controls */}
-            <div style={styles.pagination}>
-                <button
-                    disabled={currentPage === 1}
-                    onClick={() => setCurrentPage(currentPage - 1)}
-                >
-                    ⬅ Prev
-                </button>
-
-                {Array.from({ length: totalPages }, (_, i) => (
+            {/* ✅ Show pagination only if >1 page */}
+            {totalPages > 1 && (
+                <div className="d-flex justify-content-center mt-4">
                     <button
-                        key={i + 1}
-                        style={{
-                            ...styles.pageButton,
-                            backgroundColor: currentPage === i + 1 ? "#006400" : "#fff",
-                            color: currentPage === i + 1 ? "#fff" : "#000",
-                        }}
-                        onClick={() => setCurrentPage(i + 1)}
+                        className="btn btn-outline-secondary me-2"
+                        onClick={() => setPage((p) => Math.max(p - 1, 1))}
+                        disabled={page === 1}
                     >
-                        {i + 1}
+                        ← Prev
                     </button>
-                ))}
-
-                <button
-                    disabled={currentPage === totalPages}
-                    onClick={() => setCurrentPage(currentPage + 1)}
-                >
-                    Next ➡
-                </button>
-            </div>
+                    <button
+                        className="btn btn-outline-secondary"
+                        onClick={() => setPage((p) => Math.min(p + 1, totalPages))}
+                        disabled={page === totalPages}
+                    >
+                        Next →
+                    </button>
+                </div>
+            )}
         </div>
     );
 }
-
-const styles = {
-    container: {
-        padding: "40px",
-        textAlign: "center",
-    },
-    title: {
-        fontSize: "2rem",
-        marginBottom: "20px",
-    },
-    grid: {
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
-        gap: "20px",
-    },
-    card: {
-        background: "#fff",
-        padding: "20px",
-        borderRadius: "10px",
-        boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-        textAlign: "left",
-    },
-    image: {
-        width: "100%",
-        borderRadius: "6px",
-        marginTop: "10px",
-    },
-    pagination: {
-        marginTop: "30px",
-        display: "flex",
-        justifyContent: "center",
-        gap: "10px",
-    },
-    pageButton: {
-        padding: "8px 12px",
-        border: "1px solid #ccc",
-        borderRadius: "4px",
-        cursor: "pointer",
-    },
-};

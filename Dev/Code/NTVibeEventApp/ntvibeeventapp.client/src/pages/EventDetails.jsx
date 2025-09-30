@@ -107,7 +107,7 @@ export default function EventDetails() {
                     <h1>{event.title}</h1>
                     <p>
                         <strong>Date:</strong>{" "}
-                        {new Date(event.date).toLocaleDateString()}
+                        {event.date}
                     </p>
                     <p>
                         <strong>Category:</strong> {event.category}
