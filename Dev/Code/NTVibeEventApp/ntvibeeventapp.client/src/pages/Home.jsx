@@ -34,13 +34,13 @@ export default function Home() {
             {/* Banner Section */}
             <div style={styles.banner}>
                 <img src={`${import.meta.env.BASE_URL}assets/banner.jpg`} alt="Banner" style={styles.bannerImage} />
-                <div style={styles.searchContainer}>
+                {/*<div style={styles.searchContainer}>
                     <input
                         type="text"
                         placeholder="🔍 Search events..."
                         style={styles.searchBar}
                     />
-                </div>
+                </div>*/}
             </div>
 
             {/* Featured Events */}

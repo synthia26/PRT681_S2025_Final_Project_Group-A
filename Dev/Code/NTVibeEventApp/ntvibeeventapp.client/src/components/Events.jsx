@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 export default function EventList() {
     const [events, setEvents] = useState([]);
     const [page, setPage] = useState(1);
+    const [searchTerm, setSearchTerm] = useState("");
     const perPage = 6; // events per page
 
     useEffect(() => {
@@ -19,13 +20,33 @@ export default function EventList() {
         fetchEvents();
     }, []);
 
-    // Pagination logic
-    const totalPages = Math.ceil(events.length / perPage);
-    const paginatedEvents = events.slice((page - 1) * perPage, page * perPage);
+    // ✅ Filter events by search term
+    const filteredEvents = events.filter((e) =>
+        e.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
-    if (events.length === 0) {
+    // ✅ Pagination logic based on filtered results
+    const totalPages = Math.ceil(filteredEvents.length / perPage);
+    const paginatedEvents = filteredEvents.slice(
+        (page - 1) * perPage,
+        page * perPage
+    );
+
+    if (filteredEvents.length === 0) {
         return (
             <div className="container text-center my-5">
+                {/* ✅ Search bar even if no results */}
+                <input
+                    type="text"
+                    className="form-control mb-4"
+                    placeholder="🔍 Search events by title..."
+                    value={searchTerm}
+                    onChange={(e) => {
+                        setSearchTerm(e.target.value);
+                        setPage(1); // reset to first page
+                    }}
+                    style={{ maxWidth: "400px", margin: "0 auto" }}
+                />
                 <h3>No upcoming events</h3>
             </div>
         );
@@ -34,10 +55,24 @@ export default function EventList() {
     return (
         <div className="container my-4">
             <h2 className="mb-4">Upcoming Events</h2>
+
+            {/* ✅ Search input */}
+            <input
+                type="text"
+                className="form-control mb-4"
+                placeholder="🔍 Search events by title..."
+                value={searchTerm}
+                onChange={(e) => {
+                    setSearchTerm(e.target.value);
+                    setPage(1); // reset to first page when searching
+                }}
+                style={{ maxWidth: "400px" }}
+            />
+
             <div className="row">
                 {paginatedEvents.map((event) => (
                     <div className="col-md-4 mb-3" key={event.id}>
-                        <div className="card shadow-sm">
+                        <div className="card shadow-sm h-100">
                             {event.bannerFilePath && (
                                 <img
                                     src={`https://localhost:7125/${event.bannerFilePath}`}
@@ -46,12 +81,13 @@ export default function EventList() {
                                     style={{ height: "200px", objectFit: "cover" }}
                                 />
                             )}
-                            <div className="card-body">
+                            <div className="card-body d-flex flex-column">
                                 <h5 className="card-title">{event.title}</h5>
-                                <p className="card-text">
-                                    {event.date}
-                                </p>
-                                <Link to={`/events/${event.id}`} className="btn btn-primary btn-sm">
+                                <p className="card-text">{event.date}</p>
+                                <Link
+                                    to={`/events/${event.id}`}
+                                    className="btn btn-primary btn-sm mt-auto"
+                                >
                                     View Details
                                 </Link>
                             </div>
